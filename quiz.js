@@ -31,7 +31,7 @@ var QUESTIONS = [
     ]
 ];
 
-// Wrap all logic in a "ready" handler of jQuery.
+// Wrap all logic in a "ready" handler of jQuery. Basically a function that starts on html load, using jquery
 $(function() {
 
     // The current question that the user is on.
@@ -66,7 +66,7 @@ $(function() {
         var answersContainer = $("#answers");
         answersContainer.html("");
 
-        // Pull answers array out.
+        // Pull answers array out of selected question.
         var answers = question[1];
 
         // For each answer, add it to the answers container.
@@ -79,7 +79,7 @@ $(function() {
             // Wrap the anchor in an li.
             var li = $("<li></li>");
             li.append(anchor);
-            // Append the li into the answers container (which is a ul).
+            // Append the li into the answers container (which is an ul).
             answersContainer.append(li);
         }
     }
