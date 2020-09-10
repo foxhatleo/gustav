@@ -1,5 +1,7 @@
-// This is the question definitions.
-// An array of arrays which contains the question, the array of answers, and the index of the correct answer.
+// Members: Gustav Perslid
+
+// This is where the questions and answers are defined.
+// An array of arrays which contains the question, an array of answers, and the index of the correct answer.
 var QUESTIONS = [
     [
         "What is the standard starfighter of the Resistance?",
@@ -40,6 +42,16 @@ var QUESTIONS = [
             "284th Company"
         ],
         0
+    ],
+    [
+        "What's the name of the capital ship that's going to be featured in Star Wars Squadrons?",
+        [
+            "The Chimera",
+            "The Executor",
+            "The Starhawk",
+            "Home One"
+        ],
+        2
     ]
 ];
 
@@ -52,7 +64,7 @@ $(function() {
     // The number of question that the user got right.
     var points = 0;
 
-    // Listen to "I'm ready" link in the welcome div.
+    // Listen to "Start" link in the welcome div.
     $("#ready-button").click(function() {
         $("body").addClass("in-quiz");
 
@@ -85,13 +97,13 @@ $(function() {
         for (var i = 0, j = answers.length; i < j; i++) {
             var answerText = answers[i];
             // Set up the anchor of the answer.
-            var anchor = $("<a class=\".button.q\" href=\"\">" + answerText + "</a>");
+            var anchor = $("<a class=\"button q\" href=\"\">" + answerText + "</a>");
             // Add a click handler to the anchor.
             anchor.click(userClickedAnswer.bind(null, i));
             // Wrap the anchor in an li.
             var li = $("<li></li>");
             li.append(anchor);
-            // Append the li into the answers container (which is an ul).
+            // Append the li into the answers container (which is a ul).
             answersContainer.append(li);
         }
     }
@@ -109,7 +121,7 @@ $(function() {
             var correctAnswerText = question[1][correctAnswer];
             alert("You were wrong! The correct answer is \"" + correctAnswerText + "\".");
         }
-        // Show next question is there is more.
+        // Show next question if there is any left.
         if (currentQuestion < QUESTIONS.length - 1) {
             currentQuestion++;
             loadQuestion();
@@ -129,6 +141,7 @@ $(function() {
 
     }
 
+    //Listens to any object marked with the "Restart" ID
     $("#restart").click(function() {
         // Remove both in quiz class and done class.
         $("body").removeClass("in-quiz").removeClass("done");
