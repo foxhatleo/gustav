@@ -21,3 +21,47 @@
 .done #end-screen {
     display: block;
 }
+
+a{
+ text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.quizsection{
+    width: 75%;
+    height: 50%;
+    text-align: center;
+    color: rgb(2, 0, 78);
+}
+
+.button {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #004987;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 99999999px;
+    text-transform: uppercase;
+    transition: .3s ease-in-out background;
+}
+.button:hover {
+    background: #0060b4;
+}
+.button:active {
+    background: #00396b;
+}
+
+.button.q {
+    background: rgb(219, 175, 0);
+    border-radius: 0px;
+}
+.button.q:hover {
+    background: #FFCE00;
+}
+.button.q:active {
+    background: rgb(185, 148, 0);
+}

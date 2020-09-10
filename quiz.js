@@ -2,32 +2,44 @@
 // An array of arrays which contains the question, the array of answers, and the index of the correct answer.
 var QUESTIONS = [
     [
-        "What does Gustav like the best?",
+        "What is the standard starfighter of the Resistance?",
         [
-            "Sushis",
-            "Titties",
-            "Waifu",
-            "Pillows"
+            "Rz-2 A-Wing",
+            "T-70 X-Wing",
+            "BTL Y-Wing",
+            "T-65 X-Wing"
         ],
         1
     ],
     [
-        "What does Leo like the best?",
+        "What's the name of the Rebel squadron famous for consisting of multiple kinds of starfighters?",
         [
-            "Food",
-            "Dicks",
-            "Zac Efron",
-            "Chicken"
+            "Alphabet Squadron",
+            "Chimera Squadron",
+            "Rouge Squadron",
+            "Phoenix Squadron"
         ],
-        1
+        0
     ],
     [
-        "Is Gustav a weeb?",
+        "What is the name of the Nightsister that befriends and joins Cal Kestis on his journey in Jedi: Fallen Order?",
         [
-            "Fuck yes.",
-            "Fuck fuck yes!"
+            "Talia",
+            "Mari",
+            "Cere",
+            "Merrin"
         ],
-        1
+        3
+    ],
+    [
+        "What's the name of the detatchment of the 501st given to Rex and Ahsoka to fight on Mandalore at the end of the Clone Wars?",
+        [
+            "332nd Company",
+            "212nd Attack Battalion",
+            "104th Battalion",
+            "284th Company"
+        ],
+        0
     ]
 ];
 
@@ -73,7 +85,7 @@ $(function() {
         for (var i = 0, j = answers.length; i < j; i++) {
             var answerText = answers[i];
             // Set up the anchor of the answer.
-            var anchor = $("<a href=\"\">" + answerText + "</a>");
+            var anchor = $("<a class=\".button.q\" href=\"\">" + answerText + "</a>");
             // Add a click handler to the anchor.
             anchor.click(userClickedAnswer.bind(null, i));
             // Wrap the anchor in an li.
