@@ -2,10 +2,22 @@
     display: none;
 }
 
+#end-screen {
+    display: none;
+}
+
 .in-quiz #welcome {
     display: none;
 }
 
 .in-quiz #quiz-content {
+    display: block;
+}
+
+.done #welcome {
+    display: none;
+}
+
+.done #end-screen {
     display: block;
 }
