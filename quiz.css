@@ -40,6 +40,8 @@ ul{
     padding: 100px 25px;
     text-align: center;
     background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
     color: white;
 }
 
