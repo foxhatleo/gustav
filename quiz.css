@@ -2,4 +2,10 @@
     display: none;
 }
 
+.in-quiz #welcome {
+    display: none;
+}
 
+.in-quiz #quiz-content {
+    display: block;
+}
