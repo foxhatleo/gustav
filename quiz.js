@@ -120,6 +120,7 @@ $(function() {
     $("#restart").click(function() {
         // Remove both in quiz class and done class.
         $("body").removeClass("in-quiz").removeClass("done");
+        return false;
     });
 
 }); 
