@@ -1,0 +1,181 @@
+/* Load Fonts */
+@font-face {
+    font-family: EquinoxRegular;
+    src: url(equinox.otf);
+}
+@font-face {
+	font-family: Corbel;
+	src: url(corbel.ttf);
+}
+
+/* Reset browser automatic padding, change box sizing to be border based */
+div, html, body, h1, h2, h3, h4, h5, h6, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+}
+/* Set scrolling to smooth for top button*/
+html{
+    scroll-behavior: smooth;
+}
+
+/* Background */
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1; /* Set background underneath everything */
+    background-image: url(image10.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Location based on screen */
+    background-size: cover;
+}
+.overlay {
+    position: absolute; /* Location defined by overal page coordinates */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+}
+h1, h2, h4, h5, h6, .f {
+    font-family: EquinoxRegular;
+}
+h3, p, div {
+    font-family: Corbel;
+}
+
+.section-heading-separator {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0; /* Add space above top element */
+    background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,.3), rgba(255,255,255,0));
+
+    border: 0;
+}
+.section-heading-separator.white{
+    background-image: -webkit-linear-gradient(left, rgba(25,25,25,0), rgba(25,25,25,.3), rgba(25,25,25,0));
+
+}
+.content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mediaPicture {
+    border-radius: 25px;
+}
+.section1 {
+    background:rgba(0, 119, 255, 0.493);
+    /*background-image: url(projectsbg.png);*/
+    color: white;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    position: relative;
+}
+.section1-title {
+    color: rgb(255, 255, 255);
+}
+.section2 {
+    background: rgba(0,0,0,0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0% 0%; 
+    width: 100%;
+    height: 50%;
+}
+.section3 {
+    background: #2a2a2c;
+    color: white;
+    text-align: left;
+    padding: 5px 25px;
+    width: 100%;
+}
+.section4 {
+    background: rgba(42, 42, 42, 0.9);
+    color: white;
+    padding: 30px 25px;
+    width: 100%;
+    font-size: 20px;
+}
+.section5 {
+    text-align: center;
+    padding: 25px 25px;
+    width: 100%;
+}
+.section6{
+    text-align: center;
+    text-decoration: none;
+    padding: 0%;
+    width: 100%;
+    height: 50%;
+}
+.section6 div, .section5 div {
+    display: inline-block;
+    padding: 7.5% 0%;
+    width: 500px;
+    height: 200px;
+}
+.section6 div:not(:first-of-type){
+    margin-left:100px;
+}
+.section7 {
+    background-color:#2a2a2c;
+    color: rgb(215,215,215);
+    text-align: center;
+    font-size: bold;
+    padding: 25px 25px;
+    width: 100%;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(200,200,200);
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  ul {width: 50px}
+}

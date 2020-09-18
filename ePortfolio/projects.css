@@ -1,0 +1,256 @@
+/* Load Fonts */
+@font-face {
+    font-family: EquinoxRegular;
+    src: url(equinox.otf);
+}
+@font-face {
+	font-family: Corbel;
+	src: url(corbel.ttf);
+}
+
+/* Reset browser automatic padding, change box sizing to be border based */
+div, html, body, h1, h2, h3, h4, h5, h6, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+/* Set scrolling to smooth for top button*/
+html{
+    scroll-behavior: smooth;
+}
+
+/* Background */
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1; /* Set background underneath everything */
+    background-image: url(image11.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Location based on screen */
+    background-size: cover;
+}
+.overlay {
+    position: absolute; /* Location defined by overal page coordinates */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+h1, h2, h4, h5, h6, .f {
+    font-family: EquinoxRegular;
+}
+h3, p, div {
+    font-family: Corbel;
+}
+p, div {
+    font-size: 17px;
+}
+
+.section-heading-separator {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0; /* Add space above top element */
+    background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,.3), rgba(255,255,255,0));
+
+    border: 0;
+}
+.section-heading-separator.white{
+    background-image: -webkit-linear-gradient(left, rgba(25,25,25,0), rgba(25,25,25,.3), rgba(25,25,25,0));
+
+}
+.content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.button {
+    font-weight: bold;
+	font-family: Corbel;
+    text-decoration: none;
+    color: white;
+    background: #004987;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 99999999px;
+    text-transform: uppercase;
+    transition: .3s ease-in-out background;
+}
+.button:hover {
+    background: #0060b4;
+}
+.button:active {
+    background: #00396b;
+}
+.button.black {
+    background: rgb(219, 175, 0);
+}
+.button.black:hover {
+    background: #FFCE00;
+}
+.button.black:active {
+    background: rgb(185, 148, 0);
+}
+.space-on-top {
+    margin-top: 30px;
+}
+.projectpreview {
+    width: 100%;
+    height: 40%;
+}
+.section1 {
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.section1-title {
+    color: rgb(0, 217, 255);
+}
+.section2 {
+    background-image: url(projectsbg.png);
+    /*background:#004987;*/
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 100px 10px;
+    width: 100%;
+}
+.section2 p{
+    display: block;
+    text-align: center;
+    padding: 0% 10%
+}
+.section3 {
+    background: #2a2a2c;
+    color: white;
+    text-align: left;
+    padding: 5px 25px;
+    width: 100%;
+}
+.section4 a:hover, .section3 a:active {
+    color: #000;
+}
+.section4 {
+    width: 100%;
+    height: 800px;
+}
+.section4 a {
+    display: inline-block;
+    width: 33.333%;
+    float: left;
+    height: 200px;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* nth-of-type is selector that chooses the (n)th element of the same type within its parent. */
+.section4 a:nth-of-type(1) {
+    background-image: url(upg2.png);
+}
+.section4 a:nth-of-type(2) {
+    background-image: url(upg3.png);
+}
+.section4 a:nth-of-type(3) {
+    background-image: url(upg4.png);
+}
+.section4 a:nth-of-type(4) {
+    background-image: url(upg5.png);
+}
+.section4 a:nth-of-type(5) {
+    background-image: url(noimg.png);
+}
+.section4 a:nth-of-type(6) {
+    background-image: url(noimg.png);
+}
+.section4 a:nth-of-type(7) {
+    background-image: url(noimg.png);
+}
+.section4 a:nth-of-type(8) {
+    background-image: url(noimg.png);
+}
+.section4 a:nth-of-type(9) {
+    background-image: url(noimg.png);
+}
+.section4 a:nth-of-type(10) {
+    background-image: url(noimg.png);
+}
+.section4 a:nth-of-type(11) {
+    background-image: url(noimg.png);
+}
+.section4 a:nth-of-type(12) {
+    background-image: url(noimg.png);
+}
+.section4 a > div {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+    opacity: 0;
+    transition: .3s ease-in-out opacity;
+}
+.section4 a:hover > div {
+    opacity: 1;
+}
+.section5 {
+    background-color:#2a2a2c;
+    color: rgb(215,215,215);
+    text-align: center;
+    font-size: bold;
+    padding: 25px 25px;
+    width: 100%;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(200,200,200);
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  ul {width: 50px}
+}
